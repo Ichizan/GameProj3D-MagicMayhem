@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dbowfpbr56nyg"]
+
+[ext_resource type="Script" uid="uid://cmglyj2nr47qq" path="res://scripts/audio_manager.gd" id="1_glf7e"]
+[ext_resource type="AudioStream" uid="uid://b4miw2uvlyqxt" path="res://Audio/Sunstriker.wav" id="1_l0aok"]
+[ext_resource type="AudioStream" uid="uid://cbbho7benv3n1" path="res://Audio/golemz.ogg" id="2_4apyq"]
+[ext_resource type="AudioStream" uid="uid://b4tiwlr2s35v" path="res://Audio/fireball.ogg" id="2_5m6nf"]
+[ext_resource type="AudioStream" uid="uid://8e1orw3d02y8" path="res://Audio/iceball.ogg" id="3_2l8vh"]
+[ext_resource type="AudioStream" uid="uid://ccuo8rucmer8a" path="res://Audio/Thunder.ogg" id="4_nmk5h"]
+[ext_resource type="AudioStream" uid="uid://chd7jkq5icv3y" path="res://Audio/pickup.ogg" id="6_emx7l"]
+[ext_resource type="AudioStream" uid="uid://drjq5oen5s0us" path="res://Audio/portal.ogg" id="6_o44l8"]
+[ext_resource type="AudioStream" uid="uid://b6xfsnqljupg7" path="res://Audio/BGM.ogg" id="8_i3n6d"]
+[ext_resource type="AudioStream" uid="uid://7ahke7yyo3qa" path="res://Audio/Menu5.wav" id="10_c0pm0"]
+
+[node name="AudioManager" type="Node" unique_id=1544411502]
+script = ExtResource("1_glf7e")
+
+[node name="Orbital" type="AudioStreamPlayer" parent="." unique_id=524358111]
+stream = ExtResource("1_l0aok")
+bus = &"SFX"
+
+[node name="fireball" type="AudioStreamPlayer" parent="." unique_id=1505379484]
+stream = ExtResource("2_5m6nf")
+volume_db = -30.0
+bus = &"SFX"
+
+[node name="thunder" type="AudioStreamPlayer" parent="." unique_id=298350120]
+stream = ExtResource("4_nmk5h")
+bus = &"SFX"
+
+[node name="iceball" type="AudioStreamPlayer" parent="." unique_id=473648892]
+stream = ExtResource("3_2l8vh")
+volume_db = -20.0
+bus = &"SFX"
+
+[node name="golem" type="AudioStreamPlayer" parent="." unique_id=710414271]
+stream = ExtResource("2_4apyq")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="portal" type="AudioStreamPlayer" parent="." unique_id=1773279748]
+stream = ExtResource("6_o44l8")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="pickup" type="AudioStreamPlayer" parent="." unique_id=1805700695]
+stream = ExtResource("6_emx7l")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="BGM" type="AudioStreamPlayer" parent="." unique_id=1842840832]
+stream = ExtResource("8_i3n6d")
+volume_db = -20.0
+bus = &"BGM"
+parameters/looping = true
+
+[node name="click" type="AudioStreamPlayer" parent="." unique_id=217008457]
+stream = ExtResource("10_c0pm0")
+volume_db = -20.0
+bus = &"SFX"
